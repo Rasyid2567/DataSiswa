@@ -376,9 +376,15 @@ select:focus {
 
 /* --- Print Rules --- */
 @media print {
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
     body {
         background: white;
         padding: 0;
+        color: #000;
     }
 
     .no-print {
@@ -393,11 +399,28 @@ select:focus {
         max-width: 100%;
     }
 
+    h2,
+    .label-col,
+    .value-col,
+    .colon-col {
+        color: #000 !important;
+        font-weight: 700;
+    }
+
+    .line {
+        background-color: var(--primary) !important;
+        height: 5px;
+        width: 100px;
+    }
+
     .print-header h2 {
-        font-size: 24pt;
+        font-size: 26pt;
+        margin-bottom: 5px;
     }
 
     .result-table td {
-        font-size: 12pt;
+        font-size: 13pt;
+        border-bottom: 1px solid #ccc;
+        padding: 15px 5px;
     }
 }

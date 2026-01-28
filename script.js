@@ -186,7 +186,7 @@ function loadProfileForView() {
 
     if (localStorage.getItem('autoPrint') === 'true') {
         localStorage.removeItem('autoPrint');
-        setTimeout(() => { window.print(); }, 500);
+        setTimeout(() => { window.print(); }, 1000);
     }
 }
 
