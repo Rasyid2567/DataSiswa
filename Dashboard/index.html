@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <div id="p3" class="card no-print wide-card">
+        <div class="header-table">
+            <h2><i class="fa-solid fa-database"></i> Dashboard</h2>
+            <button class="btn btn-red-outline" onclick="logout()"><i class="fa-solid fa-right-from-bracket"></i>
+                Keluar</button>
+        </div>
+        <div class="table-wrapper">
+            <table class="modern-table">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Foto</th>
+                        <th>Nama</th>
+                        <th>NIS / NISN</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+        </div>
+        <button class="btn btn-blue btn-full" onclick="window.location.href='../Tambah/index.html'"><i
+                class="fa-solid fa-plus"></i> Tambah
+            Data Baru</button>
+    </div>
+    <script src="../script.js"></script>
+</body>
+
+</html>
