@@ -3,7 +3,7 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
 
 :root {
-    --primary: #4361ee;
+    --primary: rgb(67, 97, 238);
     --primary-hover: #3751d4;
     --success: #27ae60;
     --info: #3498db;
