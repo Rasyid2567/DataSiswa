@@ -31,7 +31,9 @@ document.addEventListener('DOMContentLoaded', function () {
         setupNumericInputs();
     } else if (path.includes("/biodata/")) {
         loadProfileForView();
-    } else if (path.includes("/login/")) {
+    } else if (path.endsWith("/index.html") || path.endsWith("/") || path.includes("/login/")) {
+        // Tetap include login kalau sewaktu-waktu foldernya balik, 
+        // tapi prioritas root index.html
         setupLogin();
     }
 });
@@ -65,7 +67,7 @@ function goLogin() {
     const n = document.getElementById('luser').value;
     const p = document.getElementById('lpass').value;
     if (n === "admin" && p === "admin") {
-        window.location.href = "../Dashboard/index.html";
+        window.location.href = "./Dashboard/index.html";
     } else {
         alert("Akses Ditolak! Gunakan admin/admin");
     }
@@ -251,6 +253,6 @@ function resetForm() {
 
 function logout() {
     if (confirm("Keluar dari sistem?")) {
-        window.location.href = "../Login/index.html";
+        window.location.href = "../index.html";
     }
 }
